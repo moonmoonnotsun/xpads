@@ -370,23 +370,6 @@ h2 { font-size: clamp(36px, 4vw, 56px); }
     line-height: 1.6;
     color: #c8ccd8;
 }
-.faq-title { margin: 36px 0 16px; font-size: clamp(28px, 3vw, 40px); }
-.faq { display: grid; gap: 10px; max-width: 760px; }
-.faq details {
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.04);
-    padding: 16px 18px;
-}
-.faq summary {
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: -0.02em;
-}
-.faq summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.faq p { margin: 12px 0 0; color: #c8ccd8; line-height: 1.55; font-size: 16px; }
-[dir="rtl"] .faq summary { text-align: right; }
 .jobs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 .jobs button {
     font-family: var(--mono);

@@ -95,7 +95,6 @@ const RAW_KEYS = new Set([
   'extraFonts',
   'storeUrl',
   'seoTitle',
-  'faqJson',
   'alternateName',
 ]);
 
@@ -218,18 +217,6 @@ const ALTERNATE_NAME = JSON.stringify([
   'Xpads',
 ]);
 
-function faqJson(strings) {
-  return JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [1, 2, 3, 5, 6].map((n) => ({
-      '@type': 'Question',
-      name: strings[`q${n}`],
-      acceptedAnswer: { '@type': 'Answer', text: strings[`a${n}`] },
-    })),
-  });
-}
-
 function buildPage(code) {
   if (!extra[code]) throw new Error(`Missing SEO block for ${code}`);
   for (const key of EXTRA_KEYS) {
@@ -266,7 +253,6 @@ function buildPage(code) {
     storeUrl: appStoreUrl(isEnglish ? '' : cfg.country),
     schemaName: JSON.stringify(APP_NAME),
     alternateName: ALTERNATE_NAME,
-    faqJson: faqJson(strings),
     featureList: JSON.stringify(featureList),
     hreflang: hreflangBlock(),
     localeRedirect: isEnglish ? localeRedirectScript() : '',
