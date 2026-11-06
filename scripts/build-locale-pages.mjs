@@ -7,6 +7,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { copy, seo } from '../locales/home-copy.mjs';
+import { extra, meta } from '../locales/seo-extra.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -93,6 +94,9 @@ const RAW_KEYS = new Set([
   'htmlDirAttr',
   'extraFonts',
   'storeUrl',
+  'seoTitle',
+  'faqJson',
+  'alternateName',
 ]);
 
 const template = fs.readFileSync(TEMPLATE_PATH, 'utf8');
@@ -200,10 +204,42 @@ function fill(html, values) {
   return out;
 }
 
+const EXTRA_KEYS = Object.keys(extra.en);
+const ALTERNATE_NAME = JSON.stringify([
+  'Beat Maker',
+  'beat maker',
+  'beatmaker',
+  'beat maker app',
+  'beatmaker app',
+  'drum pads',
+  'drum pad',
+  'make beats',
+  'make beat',
+  'Xpads',
+]);
+
+function faqJson(strings) {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [1, 2, 3, 4, 5, 6].map((n) => ({
+      '@type': 'Question',
+      name: strings[`q${n}`],
+      acceptedAnswer: { '@type': 'Answer', text: strings[`a${n}`] },
+    })),
+  });
+}
+
 function buildPage(code) {
-  const strings = copy[code];
-  const pageSeo = seo[code];
-  if (!strings) throw new Error(`Missing copy for ${code}`);
+  if (!extra[code]) throw new Error(`Missing SEO block for ${code}`);
+  for (const key of EXTRA_KEYS) {
+    if (typeof extra[code][key] !== 'string' || !extra[code][key]) {
+      throw new Error(`Missing ${code}.${key}`);
+    }
+  }
+  const strings = { ...copy[code], ...extra[code] };
+  const pageSeo = { ...seo[code], ...meta[code] };
+  if (!copy[code]) throw new Error(`Missing copy for ${code}`);
   if (!pageSeo?.metaTitle || !pageSeo?.metaDescription || !pageSeo?.keywords || !pageSeo?.ogLocale) {
     throw new Error(`Missing SEO for ${code}`);
   }
@@ -229,6 +265,8 @@ function buildPage(code) {
     ogLocaleAlternates: ogLocaleAlternates(code),
     storeUrl: appStoreUrl(isEnglish ? '' : cfg.country),
     schemaName: JSON.stringify(APP_NAME),
+    alternateName: ALTERNATE_NAME,
+    faqJson: faqJson(strings),
     featureList: JSON.stringify(featureList),
     hreflang: hreflangBlock(),
     localeRedirect: isEnglish ? localeRedirectScript() : '',

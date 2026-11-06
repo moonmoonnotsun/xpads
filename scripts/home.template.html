@@ -16,7 +16,11 @@
     <meta property="og:site_name" content="Beat Maker Drum Pad: Xpads">
     <meta property="og:locale" content="{{ogLocale}}">
 {{ogLocaleAlternates}}
+    <meta property="og:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{metaTitle}}">
+    <meta name="twitter:description" content="{{metaDescription}}">
+    <meta name="twitter:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="apple-itunes-app" content="app-id=6747011858">
     <meta name="theme-color" content="#0a0a0f">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
@@ -26,14 +30,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 {{extraFonts}}
-    <link rel="stylesheet" href="assets/css/home.css?v=16">
+    <link rel="stylesheet" href="assets/css/home.css?v=17">
 {{localeRedirect}}
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": {{schemaName}},
-        "alternateName": ["beat maker", "beat maker app", "drum pads", "drum pad app", "Xpads"],
+        "alternateName": {{alternateName}},
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "iOS, iPadOS",
         "inLanguage": "{{htmlLang}}",
@@ -43,6 +47,9 @@
         "downloadUrl": "{{storeUrl}}",
         "installUrl": "{{storeUrl}}"
     }
+    </script>
+    <script type="application/ld+json">
+    {{faqJson}}
     </script>
 </head>
 <body data-theme="violet">
@@ -87,14 +94,14 @@
                     <h2>{{packsHtml}}</h2>
                 </div>
                 <ul class="packs">
-                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack8%2Fcover2.jpg?alt=media" alt=""><strong>Night Call</strong><em>Trap, Hip Hop</em></li>
-                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack5%2Fcover2.jpg?alt=media" alt=""><strong>Blackout</strong><em>Trap</em></li>
-                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack9%2Fcover2.jpg?alt=media" alt=""><strong>Golden Era</strong><em>Hip Hop, Boom Bap</em></li>
-                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack10%2Fcover2.jpg?alt=media" alt=""><strong>Neon Drop</strong><em>EDM, Dance</em></li>
-                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack12%2Fcover2.jpg?alt=media" alt=""><strong>Sun Parade</strong><em>Afrobeats</em></li>
-                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack4%2Fcover2.jpg?alt=media" alt=""><strong>Afterglow</strong><em>EDM, Dance</em></li>
-                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack11%2Fcover2.jpg?alt=media" alt=""><strong>2AM Steppin</strong><em>UK Garage, 2-Step</em></li>
-                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack6%2Fcover2.jpg?alt=media" alt=""><strong>Warehouse</strong><em>Techno, Tech House</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack8%2Fcover2.jpg?alt=media" alt="Night Call {{packWord}}"><strong>Night Call</strong><em>Trap, Hip Hop</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack5%2Fcover2.jpg?alt=media" alt="Blackout {{packWord}}"><strong>Blackout</strong><em>Trap</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack9%2Fcover2.jpg?alt=media" alt="Golden Era {{packWord}}"><strong>Golden Era</strong><em>Hip Hop, Boom Bap</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack10%2Fcover2.jpg?alt=media" alt="Neon Drop {{packWord}}"><strong>Neon Drop</strong><em>EDM, Dance</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack12%2Fcover2.jpg?alt=media" alt="Sun Parade {{packWord}}"><strong>Sun Parade</strong><em>Afrobeats</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack4%2Fcover2.jpg?alt=media" alt="Afterglow {{packWord}}"><strong>Afterglow</strong><em>EDM, Dance</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack11%2Fcover2.jpg?alt=media" alt="2AM Steppin {{packWord}}"><strong>2AM Steppin</strong><em>UK Garage, 2-Step</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack6%2Fcover2.jpg?alt=media" alt="Warehouse {{packWord}}"><strong>Warehouse</strong><em>Techno, Tech House</em></li>
                 </ul>
             </section>
             <section class="block" id="setup">
@@ -150,6 +157,43 @@
                             <h3>Fusion</h3>
                         </article>
                     </div>
+                </div>
+            </section>
+            <section class="block" id="beat-maker">
+                <div class="block-head">
+                    <h2>{{seoTitle}}</h2>
+                </div>
+                <div class="seo-copy">
+                    <p>{{seoLead}}</p>
+                    <p>{{seoBody}}</p>
+                    <p>{{seoMore}}</p>
+                </div>
+                <h2 class="faq-title">{{faqTitle}}</h2>
+                <div class="faq">
+                    <details>
+                        <summary>{{q1}}</summary>
+                        <p>{{a1}}</p>
+                    </details>
+                    <details>
+                        <summary>{{q2}}</summary>
+                        <p>{{a2}}</p>
+                    </details>
+                    <details>
+                        <summary>{{q3}}</summary>
+                        <p>{{a3}}</p>
+                    </details>
+                    <details>
+                        <summary>{{q4}}</summary>
+                        <p>{{a4}}</p>
+                    </details>
+                    <details>
+                        <summary>{{q5}}</summary>
+                        <p>{{a5}}</p>
+                    </details>
+                    <details>
+                        <summary>{{q6}}</summary>
+                        <p>{{a6}}</p>
+                    </details>
                 </div>
             </section>
             <section class="end" id="end">
