@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="{{htmlLang}}"{{htmlDirAttr}}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>{{metaTitle}}</title>
+    <meta name="description" content="{{metaDescription}}">
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{pageUrl}}">
+{{hreflang}}
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{pageUrl}}">
+    <meta property="og:title" content="{{metaTitle}}">
+    <meta property="og:description" content="{{metaDescription}}">
+    <meta property="og:site_name" content="Beat Maker Drum Pad: Xpads">
+    <meta property="og:locale" content="{{ogLocale}}">
+{{ogLocaleAlternates}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="apple-itunes-app" content="app-id=6747011858">
+    <meta name="theme-color" content="#0a0a0f">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+{{extraFonts}}
+    <link rel="stylesheet" href="assets/css/home.css?v=16">
+{{localeRedirect}}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": {{schemaName}},
+        "alternateName": ["beat maker", "beat maker app", "drum pads", "drum pad app", "Xpads"],
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "iOS, iPadOS",
+        "inLanguage": "{{htmlLang}}",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": {{featureList}},
+        "downloadUrl": "{{storeUrl}}",
+        "installUrl": "{{storeUrl}}"
+    }
+    </script>
+</head>
+<body data-theme="violet">
+    <a class="skip" href="#hero">{{skip}}</a>
+    <div class="shell">
+        <div class="page">
+            <header class="top">
+                <a class="top-name" href="#hero">
+                    <img src="assets/images/apple-touch-icon.png" alt="" width="32" height="32">
+                    <span class="name-full">Beat Maker: Xpads</span>
+                    <span class="name-short">Xpads</span>
+                </a>
+                <a class="store store-ios" href="{{storeUrl}}" target="_blank" rel="noopener noreferrer"><svg class="apple" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>{{download}}</a>
+            </header>
+            <section class="hero" id="hero">
+                <div class="bars" id="bars" aria-hidden="true"></div>
+                <div class="hero-copy">
+                    <p class="app-tile"><img src="assets/images/apple-touch-icon.png" alt="" width="40" height="40">Beat Maker</p>
+                    <h1>{{heroHtml}}</h1>
+                    <p class="deck">{{deck}}</p>
+                    <a class="store store-lg store-ios" href="{{storeUrl}}" target="_blank" rel="noopener noreferrer"><svg class="apple" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span class="store-label"><span class="store-soft">{{storeSoft}}</span><span class="store-strong">{{storeStrong}}</span></span><span class="free">{{free}}</span></a>
+                </div>
+                <div class="stage">
+                <div class="rig">
+                    <div class="device device-ipad">
+                        <div class="bezel"><div class="screen" id="ipad-screen">
+                            <img class="shot is-on" data-shot="pads" src="assets/images/ipad-color.png" alt="{{altIpadPads}}" width="768" height="1024">
+                            <img class="shot" data-shot="packs" src="assets/images/ipad-catalog.jpg" alt="{{altIpadPacks}}" width="768" height="1024">
+                        </div></div>
+                    </div>
+                    <div class="device device-phone">
+                        <div class="bezel"><div class="screen">
+                            <img class="shot" data-shot="pads" src="assets/images/iphone-color.jpg" alt="{{altIphonePads}}" width="470" height="1024">
+                            <img class="shot is-on" data-shot="packs" src="assets/images/iphone-catalog.jpg" alt="{{altIphonePacks}}" width="470" height="1024">
+                        </div></div>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="block" id="packs">
+                <div class="block-head">
+                    <h2>{{packsHtml}}</h2>
+                </div>
+                <ul class="packs">
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack8%2Fcover2.jpg?alt=media" alt=""><strong>Night Call</strong><em>Trap, Hip Hop</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack5%2Fcover2.jpg?alt=media" alt=""><strong>Blackout</strong><em>Trap</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack9%2Fcover2.jpg?alt=media" alt=""><strong>Golden Era</strong><em>Hip Hop, Boom Bap</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack10%2Fcover2.jpg?alt=media" alt=""><strong>Neon Drop</strong><em>EDM, Dance</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack12%2Fcover2.jpg?alt=media" alt=""><strong>Sun Parade</strong><em>Afrobeats</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack4%2Fcover2.jpg?alt=media" alt=""><strong>Afterglow</strong><em>EDM, Dance</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack11%2Fcover2.jpg?alt=media" alt=""><strong>2AM Steppin</strong><em>UK Garage, 2-Step</em></li>
+                    <li><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/packs%2Fpack6%2Fcover2.jpg?alt=media" alt=""><strong>Warehouse</strong><em>Techno, Tech House</em></li>
+                </ul>
+            </section>
+            <section class="block" id="setup">
+                <div class="block-head">
+                    <h2>{{playHtml}}</h2>
+                </div>
+                <div class="feats">
+                    <article>
+                        <h3>{{f1Title}}</h3>
+                        <p>{{f1Body}}</p>
+                    </article>
+                    <article>
+                        <h3>{{f2Title}}</h3>
+                        <p>{{f2Body}}</p>
+                    </article>
+                    <article>
+                        <h3>{{f3Title}}</h3>
+                        <p>{{f3Body}}</p>
+                    </article>
+                    <article>
+                        <h3>{{f4Title}}</h3>
+                        <p>{{f4Body}}</p>
+                    </article>
+                    <article>
+                        <h3>{{f5Title}}</h3>
+                        <p>{{f5Body}}</p>
+                    </article>
+                    <article>
+                        <h3>{{f6Title}}</h3>
+                        <p>{{f6Body}}</p>
+                    </article>
+                </div>
+                <div class="themes">
+                    <h2>{{stylesHtml}}</h2>
+                    <div class="styles">
+                        <article>
+                            <div class="style-card"><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/pads%2Fimage1.jpg?alt=media" alt="Old School pads" width="640" height="640"></div>
+                            <h3>Old School</h3>
+                        </article>
+                        <article>
+                            <div class="style-card"><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/pads%2Fimage3.jpg?alt=media" alt="Modern pads" width="640" height="640"></div>
+                            <h3>Modern</h3>
+                        </article>
+                        <article>
+                            <div class="style-card"><img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/pads%2Fimage2.jpg?alt=media" alt="Classic pads" width="640" height="640"></div>
+                            <h3>Classic</h3>
+                        </article>
+                        <article>
+                            <div class="style-card">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/mpc-app-c2e7a.firebasestorage.app/o/pads%2Fimage4.jpg?alt=media" alt="Fusion pads" width="640" height="640">
+                                <span>{{comingSoon}}</span>
+                            </div>
+                            <h3>Fusion</h3>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="end" id="end">
+                <h2>{{endTitle}}</h2>
+                <p>{{endBody}}</p>
+                <a class="store store-lg store-ios" href="{{storeUrl}}" target="_blank" rel="noopener noreferrer"><svg class="apple" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span class="store-label"><span class="store-soft">{{storeSoft}}</span><span class="store-strong">{{storeStrong}}</span></span><span class="free">{{free}}</span></a>
+            </section>
+            <footer class="site-foot">
+                <a class="top-name" href="#hero">
+                    <img src="assets/images/apple-touch-icon.png" alt="" width="32" height="32">
+                    Xpads
+                </a>
+                {{langSwitcher}}
+                <nav aria-label="{{footerLabel}}">
+                    <a href="https://mpc-app-c2e7a.web.app/privacy.html" target="_blank" rel="noopener noreferrer">{{privacy}}</a>
+                    <a href="https://mpc-app-c2e7a.web.app/terms.html" target="_blank" rel="noopener noreferrer">{{terms}}</a>
+                    <a href="mailto:dev.ohmyapp@gmail.com">{{support}}</a>
+                    <a href="mailto:dev.ohmyapp@gmail.com">{{contact}}</a>
+                </nav>
+                <p>&copy; 2026 Beat Maker Drum Pad: Xpads</p>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/home.js?v=8"></script>
+{{langScript}}
+</body>
+</html>
