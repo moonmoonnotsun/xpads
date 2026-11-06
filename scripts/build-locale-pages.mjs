@@ -222,7 +222,7 @@ function faqJson(strings) {
   return JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [1, 2, 3, 4, 5, 6].map((n) => ({
+    mainEntity: [1, 2, 3, 5, 6].map((n) => ({
       '@type': 'Question',
       name: strings[`q${n}`],
       acceptedAnswer: { '@type': 'Answer', text: strings[`a${n}`] },
