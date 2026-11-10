@@ -134,7 +134,7 @@ html[lang="zh-Hant"] .top .store {
 .hero .deck { font-size: 20px; font-weight: 500; max-width: 34em; margin-top: 14px; }
 .hero .store-row { margin-top: 26px; }
 .hero .store {
-    margin-top: 28px;
+    margin-top: 0;
     display: inline-flex;
     align-items: center;
     gap: 14px;
@@ -648,6 +648,17 @@ h2 { font-size: clamp(36px, 4vw, 56px); }
     .top-name { white-space: nowrap; }
     .name-full { display: none; }
     .name-short { display: inline; }
+    html:not(.os-ios):not(.os-android) .top .store {
+        font-size: 0;
+        gap: 0;
+        padding: 10px;
+        letter-spacing: 0;
+    }
+    html:not(.os-ios):not(.os-android) .top .apple,
+    html:not(.os-ios):not(.os-android) .top .play-mark {
+        width: 18px;
+        height: 18px;
+    }
     .hero {
         grid-template-columns: 1fr;
         justify-items: center;

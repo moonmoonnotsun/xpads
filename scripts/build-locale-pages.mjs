@@ -13,6 +13,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const TEMPLATE_PATH = path.join(ROOT, 'scripts/home.template.html');
 const APP_ID = '6747011858';
+const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.outstandyy.mpc';
 const BASE_URL = 'https://xpads.app';
 const APP_NAME = 'Beat Maker Drum Pad: Xpads';
 
@@ -94,6 +95,7 @@ const RAW_KEYS = new Set([
   'htmlDirAttr',
   'extraFonts',
   'storeUrl',
+  'playUrl',
   'seoTitle',
   'alternateName',
 ]);
@@ -212,9 +214,14 @@ const ALTERNATE_NAME = JSON.stringify([
   'beatmaker app',
   'drum pads',
   'drum pad',
+  'drum pad app',
   'make beats',
   'make beat',
   'Xpads',
+  'beat maker for Android',
+  'beat maker for iPhone',
+  'drum pads Android',
+  'drum pads iPhone',
 ]);
 
 function buildPage(code) {
@@ -251,6 +258,7 @@ function buildPage(code) {
     ogLocale: pageSeo.ogLocale,
     ogLocaleAlternates: ogLocaleAlternates(code),
     storeUrl: appStoreUrl(isEnglish ? '' : cfg.country),
+    playUrl: PLAY_URL,
     schemaName: JSON.stringify(APP_NAME),
     alternateName: ALTERNATE_NAME,
     featureList: JSON.stringify(featureList),

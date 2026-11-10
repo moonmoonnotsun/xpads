@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <script>
+        (function () {
+            var ua = navigator.userAgent || "";
+            var platform = navigator.platform || "";
+            var touch = navigator.maxTouchPoints || 0;
+            var coarse = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+            var ipad = /iPad|iPhone|iPod/i.test(ua) || /iPad|iPhone|iPod/i.test(platform) || ((/Mac/i.test(platform) || /Macintosh/i.test(ua)) && (touch > 0 || coarse));
+            var os = /Android/i.test(ua) ? "android" : (ipad ? "ios" : "");
+            if (os) document.documentElement.classList.add("os-" + os);
+        })();
+    </script>
     <title>บีทเมกเกอร์ | ดรัมแพดสำหรับทำบีต</title>
-    <meta name="description" content="Beat maker app ฟรีสำหรับ iPhone และ iPad แตะดรัมแพดเพื่อทำบีตและเปิดแพ็กเสียง ตารางแพดสำหรับคนที่หา MPC ไม่ใช่ผลิตภัณฑ์ของ Akai">
-    <meta name="keywords" content="beat maker, beatmaker, beat maker app, beatmaker app, drum pads, drum pad, make beats, make beat, mpc, akai, mpc akai, beatmaker, ทำบีต, ดรัมแพด, mpc">
+    <meta name="description" content="Beat maker app ฟรีสำหรับ iPhone, iPad และ Android แตะดรัมแพดเพื่อทำบีตและเปิดแพ็กเสียง ตารางแพดสำหรับคนที่หา MPC ไม่ใช่ผลิตภัณฑ์ของ Akai">
+    <meta name="keywords" content="beat maker, beatmaker, beat maker app, beatmaker app, drum pads, drum pad, make beats, make beat, mpc, akai, mpc akai, iPhone, iPad, Android, Google Play, App Store, beatmaker, ทำบีต, ดรัมแพด, mpc">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://xpads.app/th/">
     <link rel="alternate" hreflang="en" href="https://xpads.app/">
@@ -48,7 +59,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://xpads.app/th/">
     <meta property="og:title" content="บีทเมกเกอร์ | ดรัมแพดสำหรับทำบีต">
-    <meta property="og:description" content="Beat maker app ฟรีสำหรับ iPhone และ iPad แตะดรัมแพดเพื่อทำบีตและเปิดแพ็กเสียง ตารางแพดสำหรับคนที่หา MPC ไม่ใช่ผลิตภัณฑ์ของ Akai">
+    <meta property="og:description" content="Beat maker app ฟรีสำหรับ iPhone, iPad และ Android แตะดรัมแพดเพื่อทำบีตและเปิดแพ็กเสียง ตารางแพดสำหรับคนที่หา MPC ไม่ใช่ผลิตภัณฑ์ของ Akai">
     <meta property="og:site_name" content="Beat Maker Drum Pad: Xpads">
     <meta property="og:locale" content="th_TH">
     <meta property="og:locale:alternate" content="en_US">
@@ -89,10 +100,15 @@
     <meta property="og:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="บีทเมกเกอร์ | ดรัมแพดสำหรับทำบีต">
-    <meta name="twitter:description" content="Beat maker app ฟรีสำหรับ iPhone และ iPad แตะดรัมแพดเพื่อทำบีตและเปิดแพ็กเสียง ตารางแพดสำหรับคนที่หา MPC ไม่ใช่ผลิตภัณฑ์ของ Akai">
+    <meta name="twitter:description" content="Beat maker app ฟรีสำหรับ iPhone, iPad และ Android แตะดรัมแพดเพื่อทำบีตและเปิดแพ็กเสียง ตารางแพดสำหรับคนที่หา MPC ไม่ใช่ผลิตภัณฑ์ของ Akai">
     <meta name="twitter:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="apple-itunes-app" content="app-id=6747011858">
+    <meta name="google-play-app" content="app-id=com.outstandyy.mpc">
     <meta name="theme-color" content="#0a0a0f">
+    <link rel="preconnect" href="https://apps.apple.com" crossorigin>
+    <link rel="dns-prefetch" href="https://apps.apple.com">
+    <link rel="preconnect" href="https://play.google.com" crossorigin>
+    <link rel="dns-prefetch" href="https://play.google.com">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
@@ -100,22 +116,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/home.css?v=18">
+    <link rel="stylesheet" href="../assets/css/home.css?v=19">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Beat Maker Drum Pad: Xpads",
-        "alternateName": ["Beat Maker","beat maker","beatmaker","beat maker app","beatmaker app","drum pads","drum pad","make beats","make beat","Xpads"],
-        "applicationCategory": "MultimediaApplication",
-        "operatingSystem": "iOS, iPadOS",
-        "inLanguage": "th",
-        "isAccessibleForFree": true,
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "featureList": ["แพด","แพ็กเสียง","สไตล์แพด","บทเรียน","หลายแนว","iPhone และ iPad"],
-        "downloadUrl": "https://apps.apple.com/th/app/id6747011858",
-        "installUrl": "https://apps.apple.com/th/app/id6747011858"
+        "@graph": [
+            {
+                "@type": "SoftwareApplication",
+                "name": "Beat Maker Drum Pad: Xpads",
+                "alternateName": ["Beat Maker","beat maker","beatmaker","beat maker app","beatmaker app","drum pads","drum pad","drum pad app","make beats","make beat","Xpads","beat maker for Android","beat maker for iPhone","drum pads Android","drum pads iPhone"],
+                "applicationCategory": "MultimediaApplication",
+                "operatingSystem": "iOS, iPadOS",
+                "inLanguage": "th",
+                "isAccessibleForFree": true,
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                "featureList": ["แพด","แพ็กเสียง","สไตล์แพด","บทเรียน","หลายแนว","iPhone, iPad และ Android"],
+                "downloadUrl": "https://apps.apple.com/th/app/id6747011858",
+                "installUrl": "https://apps.apple.com/th/app/id6747011858"
+            },
+            {
+                "@type": "SoftwareApplication",
+                "name": "Beat Maker Drum Pad: Xpads",
+                "alternateName": ["Beat Maker","beat maker","beatmaker","beat maker app","beatmaker app","drum pads","drum pad","drum pad app","make beats","make beat","Xpads","beat maker for Android","beat maker for iPhone","drum pads Android","drum pads iPhone"],
+                "applicationCategory": "MultimediaApplication",
+                "operatingSystem": "Android",
+                "inLanguage": "th",
+                "isAccessibleForFree": true,
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                "featureList": ["แพด","แพ็กเสียง","สไตล์แพด","บทเรียน","หลายแนว","iPhone, iPad และ Android"],
+                "downloadUrl": "https://play.google.com/store/apps/details?id=com.outstandyy.mpc",
+                "installUrl": "https://play.google.com/store/apps/details?id=com.outstandyy.mpc"
+            }
+        ]
     }
     </script>
 </head>
@@ -129,15 +162,21 @@
                     <span class="name-full">Beat Maker: Xpads</span>
                     <span class="name-short">Xpads</span>
                 </a>
-                <a class="store store-ios" href="https://apps.apple.com/th/app/id6747011858" target="_blank" rel="noopener noreferrer"><svg class="apple" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>โหลด</a>
+                <div class="top-actions">
+                    <a class="store store-ios" href="https://apps.apple.com/th/app/id6747011858" target="_blank" rel="noopener noreferrer"><svg class="apple" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>โหลด</a>
+                    <a class="store store-play store-android" href="https://play.google.com/store/apps/details?id=com.outstandyy.mpc" target="_blank" rel="noopener noreferrer"><svg class="play-mark" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M6.2 3.4c-.7.4-1.2 1.2-1.2 2.1v13c0 .9.5 1.7 1.2 2.1.7.4 1.6.4 2.3 0l11.2-6.5c.8-.4 1.3-1.2 1.3-2.1s-.5-1.7-1.3-2.1L8.5 3.4c-.7-.4-1.6-.4-2.3 0z"/></svg>โหลด</a>
+                </div>
             </header>
             <section class="hero" id="hero">
                 <div class="bars" id="bars" aria-hidden="true"></div>
                 <div class="hero-copy">
                     <p class="app-tile"><img src="../assets/images/apple-touch-icon.png" alt="" width="40" height="40">Beat Maker</p>
                     <h1>แพดสำหรับ<br><span class="line"><span>ทำบีต</span> และ <span>เล่นสด</span></span></h1>
-                    <p class="deck">แพ็กเสียงสำหรับ Hip Hop, Trap, EDM และอื่น ๆ บน iPhone และ iPad</p>
-                    <a class="store store-lg store-ios" href="https://apps.apple.com/th/app/id6747011858" target="_blank" rel="noopener noreferrer"><svg class="apple" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span class="store-label"><span class="store-soft">ดาวน์โหลดบน</span><span class="store-strong">App Store</span></span><span class="free">ฟรี</span></a>
+                    <p class="deck">แพ็กเสียงสำหรับ Hip Hop, Trap, EDM และอื่น ๆ บน iPhone, iPad และ Android</p>
+                    <div class="store-row">
+                        <a class="store store-lg store-ios" href="https://apps.apple.com/th/app/id6747011858" target="_blank" rel="noopener noreferrer"><svg class="apple" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span class="store-label"><span class="store-soft">ดาวน์โหลดบน</span><span class="store-strong">App Store</span></span><span class="free">ฟรี</span></a>
+                        <a class="store store-lg store-play store-android" href="https://play.google.com/store/apps/details?id=com.outstandyy.mpc" target="_blank" rel="noopener noreferrer"><svg class="play-mark" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.2 3.4c-.7.4-1.2 1.2-1.2 2.1v13c0 .9.5 1.7 1.2 2.1.7.4 1.6.4 2.3 0l11.2-6.5c.8-.4 1.3-1.2 1.3-2.1s-.5-1.7-1.3-2.1L8.5 3.4c-.7-.4-1.6-.4-2.3 0z"/></svg><span class="store-label"><span class="store-soft">ดาวน์โหลดบน</span><span class="store-strong">Google Play</span></span><span class="free">ฟรี</span></a>
+                    </div>
                 </div>
                 <div class="stage">
                 <div class="rig">
@@ -197,7 +236,7 @@
                         <p>Trap, Hip Hop, EDM, Techno, House, Lo-Fi, Afrobeats และอื่น ๆ</p>
                     </article>
                     <article>
-                        <h3>iPhone และ iPad</h3>
+                        <h3>iPhone, iPad และ Android</h3>
                         <p>เล่นบนมือถือ หรือเปิดตารางแพดที่ใหญ่กว่าบน iPad</p>
                     </article>
                 </div>
@@ -229,14 +268,17 @@
                 </div>
                 <div class="seo-copy">
                     <p>Beat maker app คือวิธีทำบีตบนโทรศัพท์ Beat Maker คือแอปนั้น มีดรัมแพดสำหรับกลอง เบส เมโลดี และแซมเพิล พร้อมแพ็กเสียง Hip Hop, Trap, EDM และอื่น ๆ</p>
-                    <p>เปิดแพ็ก แตะดรัมแพด แล้วเล่น ทำบีตด้วยหู แล้วฝึกบีตนั้นในบทเรียน เล่นซ้ำ และเก็บคะแนนที่ดีที่สุด beatmaker เดียวกันใช้ได้ทั้งบน iPhone และตารางแพดที่ใหญ่กว่าบน iPad</p>
+                    <p>เปิดแพ็ก แตะดรัมแพด แล้วเล่น ทำบีตด้วยหู แล้วฝึกบีตนั้นในบทเรียน เล่นซ้ำ และเก็บคะแนนที่ดีที่สุด beatmaker เดียวกันใช้ได้ทั้งบน iPhone, Android และตารางแพดที่ใหญ่กว่าบน iPad</p>
                     <p>หลายคนค้นหา Akai MPC เมื่ออยากได้ดรัมแพด Akai และ MPC เป็นผลิตภัณฑ์ของ Akai Professional Beat Maker ไม่ใช่ผลิตภัณฑ์นั้น เป็นแอปดรัมแพดฟรีสำหรับเล่นแพดและทำบีต</p>
                 </div>
             </section>
             <section class="end" id="end">
                 <h2>ดาวน์โหลด Beat Maker ฟรี</h2>
-                <p>ฟรีบน iPhone และ iPad มีแพด แพ็กเสียง และบทเรียน</p>
-                <a class="store store-lg store-ios" href="https://apps.apple.com/th/app/id6747011858" target="_blank" rel="noopener noreferrer"><svg class="apple" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span class="store-label"><span class="store-soft">ดาวน์โหลดบน</span><span class="store-strong">App Store</span></span><span class="free">ฟรี</span></a>
+                <p>ฟรีบน iPhone, iPad และ Android มีแพด แพ็กเสียง และบทเรียน</p>
+                <div class="store-row">
+                    <a class="store store-lg store-ios" href="https://apps.apple.com/th/app/id6747011858" target="_blank" rel="noopener noreferrer"><svg class="apple" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span class="store-label"><span class="store-soft">ดาวน์โหลดบน</span><span class="store-strong">App Store</span></span><span class="free">ฟรี</span></a>
+                    <a class="store store-lg store-play store-android" href="https://play.google.com/store/apps/details?id=com.outstandyy.mpc" target="_blank" rel="noopener noreferrer"><svg class="play-mark" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.2 3.4c-.7.4-1.2 1.2-1.2 2.1v13c0 .9.5 1.7 1.2 2.1.7.4 1.6.4 2.3 0l11.2-6.5c.8-.4 1.3-1.2 1.3-2.1s-.5-1.7-1.3-2.1L8.5 3.4c-.7-.4-1.6-.4-2.3 0z"/></svg><span class="store-label"><span class="store-soft">ดาวน์โหลดบน</span><span class="store-strong">Google Play</span></span><span class="free">ฟรี</span></a>
+                </div>
             </section>
             <footer class="site-foot">
                 <a class="top-name" href="#hero">
