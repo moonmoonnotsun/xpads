@@ -14,7 +14,7 @@
             if (os) document.documentElement.classList.add("os-" + os);
         })();
     </script>
-    <title>Beatmaker | Drum pads för att göra beats</title>
+    <title>Beatmaker App | Beat Maker — Drum Pads för att göra beats</title>
     <meta name="description" content="Gratis beatmaker för iPhone, iPad och Android. Tryck på drum pads för att göra beats och öppna ljudpaket. Ett padraster för den som söker en MPC.">
     <meta name="keywords" content="beat maker, beatmaker, beat maker app, beatmaker app, drum pads, drum pad, make beats, make beat, mpc, akai, mpc akai, iPhone, iPad, Android, Google Play, App Store, beatmaker, göra beats, drum pads, mpc">
     <meta name="robots" content="index, follow">
@@ -58,7 +58,7 @@
     <link rel="alternate" hreflang="x-default" href="https://xpads.app/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://xpads.app/sv/">
-    <meta property="og:title" content="Beatmaker | Drum pads för att göra beats">
+    <meta property="og:title" content="Beatmaker App | Beat Maker — Drum Pads för att göra beats">
     <meta property="og:description" content="Gratis beatmaker för iPhone, iPad och Android. Tryck på drum pads för att göra beats och öppna ljudpaket. Ett padraster för den som söker en MPC.">
     <meta property="og:site_name" content="Beat Maker Drum Pad: Xpads">
     <meta property="og:locale" content="sv_SE">
@@ -99,7 +99,7 @@
     <meta property="og:locale:alternate" content="fr_CA">
     <meta property="og:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Beatmaker | Drum pads för att göra beats">
+    <meta name="twitter:title" content="Beatmaker App | Beat Maker — Drum Pads för att göra beats">
     <meta name="twitter:description" content="Gratis beatmaker för iPhone, iPad och Android. Tryck på drum pads för att göra beats och öppna ljudpaket. Ett padraster för den som söker en MPC.">
     <meta name="twitter:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="apple-itunes-app" content="app-id=6747011858">
@@ -117,7 +117,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../assets/css/home.css?v=19">
-
+    <script>
+        (function () {
+            var path = window.location.pathname;
+            if (!/\/index\.html$/.test(path)) return;
+            var next = path.replace(/index\.html$/, '');
+            window.location.replace(next + window.location.search + window.location.hash);
+        })();
+    </script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -229,7 +236,7 @@
                     </article>
                     <article>
                         <h3>Lektioner</h3>
-                        <p>Öva på en beat, spela upp den igen och behåll ditt bästa resultat.</p>
+                        <p>Öva på ett beat, spela upp den igen och behåll ditt bästa resultat.</p>
                     </article>
                     <article>
                         <h3>Många genrer</h3>
@@ -268,7 +275,7 @@
                 </div>
                 <div class="seo-copy">
                     <p>En beat maker app är ett sätt att göra beats på telefonen. Beat Maker är den appen: drum pads för trummor, bas, melodi och samples, plus ljudpaket för Hip Hop, Trap, EDM och mer.</p>
-                    <p>Öppna ett paket, tryck på en drum pad och spela. Gör en beat på gehör, öva den i en lektion, spela upp den igen och behåll ditt bästa resultat. Samma beatmaker fungerar på iPhone, Android och på ett större padraster på iPad.</p>
+                    <p>Öppna ett paket, tryck på en drum pad och spela. Gör ett beat på gehör, öva den i en lektion, spela upp den igen och behåll ditt bästa resultat. Samma beatmaker fungerar på iPhone, Android och på ett större padraster på iPad.</p>
                     <p>Många söker efter en Akai MPC när de vill ha drum pads. Akai och MPC tillhör Akai Professional. Beat Maker är inte en av dem. Det är en gratis drum-pad-app för att spela pads och göra beats.</p>
                 </div>
             </section>

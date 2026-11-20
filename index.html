@@ -14,7 +14,7 @@
             if (os) document.documentElement.classList.add("os-" + os);
         })();
     </script>
-    <title>Beat Maker App | Drum Pads to Make Beats</title>
+    <title>Beatmaker App | Beat Maker — Drum Pads to Make Beats</title>
     <meta name="description" content="Free beat maker app for iPhone, iPad, and Android. Tap drum pads to make beats, open sound packs, and practice a beat. A drum pad grid for people searching for an MPC-style pad.">
     <meta name="keywords" content="beat maker, beatmaker, beat maker app, beatmaker app, drum pads, drum pad, make beats, make beat, mpc, akai, mpc akai, iPhone, iPad, Android, Google Play, App Store, drum machine, hip hop pads, trap beats">
     <meta name="robots" content="index, follow">
@@ -58,7 +58,7 @@
     <link rel="alternate" hreflang="x-default" href="https://xpads.app/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://xpads.app/">
-    <meta property="og:title" content="Beat Maker App | Drum Pads to Make Beats">
+    <meta property="og:title" content="Beatmaker App | Beat Maker — Drum Pads to Make Beats">
     <meta property="og:description" content="Free beat maker app for iPhone, iPad, and Android. Tap drum pads to make beats, open sound packs, and practice a beat. A drum pad grid for people searching for an MPC-style pad.">
     <meta property="og:site_name" content="Beat Maker Drum Pad: Xpads">
     <meta property="og:locale" content="en_US">
@@ -99,7 +99,7 @@
     <meta property="og:locale:alternate" content="fr_CA">
     <meta property="og:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Beat Maker App | Drum Pads to Make Beats">
+    <meta name="twitter:title" content="Beatmaker App | Beat Maker — Drum Pads to Make Beats">
     <meta name="twitter:description" content="Free beat maker app for iPhone, iPad, and Android. Tap drum pads to make beats, open sound packs, and practice a beat. A drum pad grid for people searching for an MPC-style pad.">
     <meta name="twitter:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="apple-itunes-app" content="app-id=6747011858">
@@ -119,16 +119,10 @@
     <link rel="stylesheet" href="assets/css/home.css?v=19">
     <script>
         (function () {
-            var routes = {"de":"/de/","fr":"/fr/","es":"/es/","ru":"/ru/","pl":"/pl/","ja":"/ja/","pt":"/pt/","pt-br":"/pt/","zh":"/zh/","zh-cn":"/zh/","zh-hans":"/zh/","ko":"/ko/","it":"/it/","nl":"/nl/","tr":"/tr/","uk":"/uk/","ua":"/uk/","ar":"/ar/","sv":"/sv/","zh-tw":"/zh-tw/","zh-hant":"/zh-tw/","zh-hk":"/zh-tw/","pt-pt":"/pt-pt/","vi":"/vi/","id":"/id/","th":"/th/","cs":"/cs/","da":"/da/","nb":"/nb/","no":"/nb/","nn":"/nb/","fi":"/fi/","he":"/he/","ca":"/ca/","hr":"/hr/","el":"/el/","hi":"/hi/","hu":"/hu/","ms":"/ms/","es-mx":"/es-mx/","ro":"/ro/","sk":"/sk/","fr-ca":"/fr-ca/"};
             var path = window.location.pathname;
-            if (path !== '/' && path !== '/index.html') return;
-            var langs = navigator.languages || [navigator.language || 'en'];
-            var primary = (langs[0] || 'en').toLowerCase();
-            if (primary === 'en' || primary.indexOf('en-') === 0) return;
-            var tag = primary;
-            var base = primary.split('-')[0];
-            if (routes[tag]) { window.location.replace(routes[tag]); return; }
-            if (routes[base]) { window.location.replace(routes[base]); return; }
+            if (!/\/index\.html$/.test(path)) return;
+            var next = path.replace(/index\.html$/, '');
+            window.location.replace(next + window.location.search + window.location.hash);
         })();
     </script>
     <script type="application/ld+json">

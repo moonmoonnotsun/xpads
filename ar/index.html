@@ -14,7 +14,7 @@
             if (os) document.documentElement.classList.add("os-" + os);
         })();
     </script>
-    <title>بيت ميكر | بادز لصنع البيتس</title>
+    <title>Beatmaker App | Beat Maker — Drum Pads بادز لصنع البيتس</title>
     <meta name="description" content="تطبيق beat maker مجاني لـ iPhone وiPad وAndroid. اضغط البادز لصنع البيتس وافتح حزم الأصوات. شبكة بادز لمن يبحث عن MPC. ليس منتج Akai.">
     <meta name="keywords" content="beat maker, beatmaker, beat maker app, beatmaker app, drum pads, drum pad, make beats, make beat, mpc, akai, mpc akai, iPhone, iPad, Android, Google Play, App Store, بيت ميكر, بادز, بيتك, mpc, akai">
     <meta name="robots" content="index, follow">
@@ -58,7 +58,7 @@
     <link rel="alternate" hreflang="x-default" href="https://xpads.app/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://xpads.app/ar/">
-    <meta property="og:title" content="بيت ميكر | بادز لصنع البيتس">
+    <meta property="og:title" content="Beatmaker App | Beat Maker — Drum Pads بادز لصنع البيتس">
     <meta property="og:description" content="تطبيق beat maker مجاني لـ iPhone وiPad وAndroid. اضغط البادز لصنع البيتس وافتح حزم الأصوات. شبكة بادز لمن يبحث عن MPC. ليس منتج Akai.">
     <meta property="og:site_name" content="Beat Maker Drum Pad: Xpads">
     <meta property="og:locale" content="ar_SA">
@@ -99,7 +99,7 @@
     <meta property="og:locale:alternate" content="fr_CA">
     <meta property="og:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="بيت ميكر | بادز لصنع البيتس">
+    <meta name="twitter:title" content="Beatmaker App | Beat Maker — Drum Pads بادز لصنع البيتس">
     <meta name="twitter:description" content="تطبيق beat maker مجاني لـ iPhone وiPad وAndroid. اضغط البادز لصنع البيتس وافتح حزم الأصوات. شبكة بادز لمن يبحث عن MPC. ليس منتج Akai.">
     <meta name="twitter:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="apple-itunes-app" content="app-id=6747011858">
@@ -117,7 +117,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/home.css?v=19">
-
+    <script>
+        (function () {
+            var path = window.location.pathname;
+            if (!/\/index\.html$/.test(path)) return;
+            var next = path.replace(/index\.html$/, '');
+            window.location.replace(next + window.location.search + window.location.hash);
+        })();
+    </script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",

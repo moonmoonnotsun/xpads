@@ -14,7 +14,7 @@
             if (os) document.documentElement.classList.add("os-" + os);
         })();
     </script>
-    <title>ביטמייקר | פאדים ליצירת ביטים</title>
+    <title>Beatmaker App | Beat Maker — Drum Pads פאדים ליצירת ביטים</title>
     <meta name="description" content="אפליקציית beat maker בחינם ל-iPhone, ל-iPad ול-Android. לוחצים על פאדים, יוצרים ביטים ופותחים חבילות סאונד. רשת פאדים למי שמחפש MPC. לא מוצר של Akai.">
     <meta name="keywords" content="beat maker, beatmaker, beat maker app, beatmaker app, drum pads, drum pad, make beats, make beat, mpc, akai, mpc akai, iPhone, iPad, Android, Google Play, App Store, ביטמייקר, פאדים, ביט, mpc, akai">
     <meta name="robots" content="index, follow">
@@ -58,7 +58,7 @@
     <link rel="alternate" hreflang="x-default" href="https://xpads.app/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://xpads.app/he/">
-    <meta property="og:title" content="ביטמייקר | פאדים ליצירת ביטים">
+    <meta property="og:title" content="Beatmaker App | Beat Maker — Drum Pads פאדים ליצירת ביטים">
     <meta property="og:description" content="אפליקציית beat maker בחינם ל-iPhone, ל-iPad ול-Android. לוחצים על פאדים, יוצרים ביטים ופותחים חבילות סאונד. רשת פאדים למי שמחפש MPC. לא מוצר של Akai.">
     <meta property="og:site_name" content="Beat Maker Drum Pad: Xpads">
     <meta property="og:locale" content="he_IL">
@@ -99,7 +99,7 @@
     <meta property="og:locale:alternate" content="fr_CA">
     <meta property="og:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ביטמייקר | פאדים ליצירת ביטים">
+    <meta name="twitter:title" content="Beatmaker App | Beat Maker — Drum Pads פאדים ליצירת ביטים">
     <meta name="twitter:description" content="אפליקציית beat maker בחינם ל-iPhone, ל-iPad ול-Android. לוחצים על פאדים, יוצרים ביטים ופותחים חבילות סאונד. רשת פאדים למי שמחפש MPC. לא מוצר של Akai.">
     <meta name="twitter:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="apple-itunes-app" content="app-id=6747011858">
@@ -117,7 +117,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/home.css?v=19">
-
+    <script>
+        (function () {
+            var path = window.location.pathname;
+            if (!/\/index\.html$/.test(path)) return;
+            var next = path.replace(/index\.html$/, '');
+            window.location.replace(next + window.location.search + window.location.hash);
+        })();
+    </script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",

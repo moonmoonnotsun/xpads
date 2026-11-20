@@ -14,7 +14,7 @@
             if (os) document.documentElement.classList.add("os-" + os);
         })();
     </script>
-    <title>Beatmaker | Drum padek beathez</title>
+    <title>Beatmaker App | Beat Maker — Drum Pads beathez</title>
     <meta name="description" content="Ingyenes beatmaker iPhone-ra, iPadre és Androidra. Koppints a drum padekre, készíts beatet és nyiss hangcsomagokat. Padrács annak, aki MPC-t keres.">
     <meta name="keywords" content="beat maker, beatmaker, beat maker app, beatmaker app, drum pads, drum pad, make beats, make beat, mpc, akai, mpc akai, iPhone, iPad, Android, Google Play, App Store, beatmaker, beatkészítés, drum pad, mpc">
     <meta name="robots" content="index, follow">
@@ -58,7 +58,7 @@
     <link rel="alternate" hreflang="x-default" href="https://xpads.app/">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://xpads.app/hu/">
-    <meta property="og:title" content="Beatmaker | Drum padek beathez">
+    <meta property="og:title" content="Beatmaker App | Beat Maker — Drum Pads beathez">
     <meta property="og:description" content="Ingyenes beatmaker iPhone-ra, iPadre és Androidra. Koppints a drum padekre, készíts beatet és nyiss hangcsomagokat. Padrács annak, aki MPC-t keres.">
     <meta property="og:site_name" content="Beat Maker Drum Pad: Xpads">
     <meta property="og:locale" content="hu_HU">
@@ -99,7 +99,7 @@
     <meta property="og:locale:alternate" content="fr_CA">
     <meta property="og:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Beatmaker | Drum padek beathez">
+    <meta name="twitter:title" content="Beatmaker App | Beat Maker — Drum Pads beathez">
     <meta name="twitter:description" content="Ingyenes beatmaker iPhone-ra, iPadre és Androidra. Koppints a drum padekre, készíts beatet és nyiss hangcsomagokat. Padrács annak, aki MPC-t keres.">
     <meta name="twitter:image" content="https://xpads.app/assets/images/apple-touch-icon.png">
     <meta name="apple-itunes-app" content="app-id=6747011858">
@@ -117,7 +117,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../assets/css/home.css?v=19">
-
+    <script>
+        (function () {
+            var path = window.location.pathname;
+            if (!/\/index\.html$/.test(path)) return;
+            var next = path.replace(/index\.html$/, '');
+            window.location.replace(next + window.location.search + window.location.hash);
+        })();
+    </script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -268,7 +275,7 @@
                 </div>
                 <div class="seo-copy">
                     <p>A beat maker app arra való, hogy a telefonon beatet készíts. A Beat Maker pont ez: drum padek dobra, basszusra, dallamra és sample-re, hangcsomagokkal Hip Hophoz, Traphez, EDMhez és máshoz.</p>
-                    <p>Nyiss meg egy csomagot, koppints egy drum padre, és játssz. Készíts beatet fülre, gyakorold egy leckében, játszd vissza, és tartsd meg a legjobb eredményed. Ugyanez a beatmaker megy iPhone-on, Androidon és nagyobb padrácson iPaden.</p>
+                    <p>Nyiss meg egy csomagot, koppints egy drum padre, és játssz. Készíts beatet hallás után, gyakorold egy leckében, játszd vissza, és tartsd meg a legjobb eredményed. Ugyanez a beatmaker megy iPhone-on, Androidon és nagyobb padrácson iPaden.</p>
                     <p>Sokan Akai MPC-t keresnek, ha drum padet akarnak. Az Akai és az MPC az Akai Professional terméke. A Beat Maker nem közülük való. Ingyenes drum pad app padokhoz és beatkészítéshez.</p>
                 </div>
             </section>
